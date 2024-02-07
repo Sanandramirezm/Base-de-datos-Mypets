@@ -1,0 +1,178 @@
+CREATE TABLE ciudades(
+  CodCiudad number(10,0) NOT NULL,
+  NombreCiudad varchar2(20 BYTE) DEFAULT '' NOT NULL,
+  PRIMARY KEY (CodCiudad)
+);
+CREATE TABLE clinica(
+  NumClinica number(10,0) NOT NULL,
+  NombreClinica varchar2(50 BYTE) NOT NULL,
+  DiClinica varchar2(250 BYTE) NOT NULL UNIQUE,
+  Fax number(10,0) NOT NULL UNIQUE,
+  CodCiudad number(10,0),
+  PRIMARY KEY (NumClinica),
+  FOREIGN KEY (CodCiudad) REFERENCES ciudades(CodCiudad)
+);
+CREATE TABLE telefono_clinica(
+  NumClinica number(10,0),
+  telefono number(10,0) NOT NULL,
+  FOREIGN KEY (NumClinica) REFERENCES clinica(NumClinica)
+);
+CREATE TABLE empleados(
+  Documento number(10,0) NOT NULL,
+  TipoDocumento varchar2(10 BYTE) NOT NULL,
+  Nombre varchar2(100 BYTE) DEFAULT '' NOT NULL,
+  Sexo varchar2(20 BYTE) NOT NULL CHECK (Sexo IN ('masculino', 'femenino')),
+  Direccion varchar2(50 BYTE) NOT NULL,
+  FechaNacimiento DATE NOT NULL,
+  Posicion varchar2(50 BYTE) NOT NULL,
+  SalarioAnual number(*,0) NOT NULL,
+  Telefono number(10,0) NOT NULL,
+  NumClinica number(10,0),
+  PRIMARY KEY (Documento,TipoDocumento),
+  FOREIGN KEY (NumClinica) REFERENCES clinica(NumClinica)
+);
+CREATE TABLE gerente(
+  Documento number(10,0),
+  TipoDocumento varchar2(10 BYTE) NOT NULL,
+  Nombre varchar2(100 BYTE) DEFAULT '' NOT NULL,
+  Sexo varchar2(20 BYTE) NOT NULL CHECK (Sexo IN ('masculino', 'femenino')),
+  Direccion varchar2(50 BYTE) NOT NULL,
+  FechaNacimiento DATE NOT NULL,
+  SalarioAnual number(*,0) NOT NULL,
+  Telefono number(10,0) NOT NULL,
+  NumClinica number(10,0),
+  PRIMARY KEY (Documento,TipoDocumento),
+  FOREIGN KEY (NumClinica) REFERENCES clinica(NumClinica)
+);
+CREATE TABLE corralxclinica(
+  Id_corral number(10,0) NOT NULL,
+  NumClinica number(10,0) NOT NULL,
+  PRIMARY KEY (Id_corral),
+  FOREIGN KEY (NumClinica) REFERENCES clinica(NumClinica)
+);
+CREATE TABLE suministrosbase(
+Tipo varchar2(50 BYTE) NOT NULL,
+Nombre varchar2(20 BYTE) NOT NULL,
+Descripcion varchar2(250 BYTE) NOT NULL,
+cantidad_stock number(*) NOT NULL,
+Nivel_reorden varchar2(50 BYTE) NOT NULL,
+cantidad_repedido number(*) NOT NULL,
+Costo number(*) NOT NULL,
+NumClinica number(10,0) NOT NULL,
+PRIMARY KEY (Nombre, Descripcion,NumClinica),
+FOREIGN KEY (NumClinica) REFERENCES clinica(NumClinica)
+);
+CREATE TABLE suministrosfarmac(
+Tipo varchar2(50 BYTE) NOT NULL,
+Nombre varchar2(20 BYTE) NOT NULL,
+Dosis number(10,0) NOT NULL,
+Administracion varchar2( 50 BYTE) NOT NULL,
+cantidad_stock number(*) NOT NULL,
+Nivel_reorden varchar2(50 BYTE) NOT NULL,
+cantidad_repedido number(*) NOT NULL,
+Costo number(*) NOT NULL,
+Id_med number(*) NOT NULL,
+NumClinica number(10,0) NOT NULL,
+PRIMARY KEY (Id_med),
+FOREIGN KEY (NumClinica) REFERENCES clinica(NumClinica)
+);
+CREATE TABLE dueño(
+Tipo_documento varchar2(20 BYTE) NOT NULL,
+Documento number(10,0) NOT NULL,
+Nombre varchar2(20 BYTE) NOT NULL,
+Direccion varchar2(50 BYTE) NOT NULL,
+telefono_casa number(10,0) NOT NULL,
+PRIMARY KEY (Tipo_documento, Documento)
+);
+CREATE TABLE mascota(
+    Documento number(10,0) NOT NULL,
+    Tipo_documento varchar2(20 BYTE) NOT NULL,
+    Id_mascota number(10,0) NOT NULL,
+    Nombre varchar2(20 BYTE) NOT NULL,
+    Tipo_mascota varchar2(50 BYTE) NOT NULL,
+    Descripcion varchar2(200 BYTE) NOT NULL,
+    FechaNacimiento DATE NOT NULL,
+    FechaRegistro DATE NOT NULL,
+    Estado varchar2(20 BYTE) NOT NULL,
+PRIMARY KEY (Id_mascota),
+FOREIGN KEY (Tipo_documento,Documento) REFERENCES dueño(Tipo_documento,Documento)
+);
+CREATE TABLE examen(
+Documento number(10,0) NOT NULL,
+TipoDocumento varchar2(10 BYTE) NOT NULL,
+Id_mascota number(10,0) NOT NULL,
+FechaExamen DATE NOT NULL,
+Hora TIMESTAMP(0) NOT NULL,
+Descripcion varchar2(250 BYTE) NOT NULL,
+PRIMARY KEY (Id_mascota,FechaExamen),
+FOREIGN KEY (Documento,TipoDocumento) REFERENCES empleados(Documento,TipoDocumento),
+FOREIGN KEY (Id_mascota) REFERENCES mascota(Id_mascota)
+);
+CREATE TABLE cita(
+Fecha DATE NOT NULL,
+Hora TIMESTAMP(0) NOT NULL,
+NumClinica number(10,0) NOT NULL,
+Id_mascota number(10,0) NOT NULL,
+FOREIGN KEY (NumClinica) REFERENCES clinica(NumClinica),
+FOREIGN KEY (Id_mascota) REFERENCES mascota(Id_mascota)
+);
+CREATE TABLE TipoTratamiento(
+    CodTratamiento number(10,0) NOT NULL,
+    Descripcion varchar2(50 BYTE) NOT NULL,
+    Costo number(10,0) NOT NULL,
+    PRIMARY KEY (CodTratamiento)
+);
+CREATE TABLE tratamiento(
+    CodTratamiento number(10,0) NOT NULL,
+    FechaExamen DATE NOT NULL,
+    Id_mascota number(10,0) NOT NULL,
+    Cantidad number (10,0) NOT NULL,
+    Fecha_inicio DATE NOT NULL,
+    Fecha_finaliza DATE NOT NULL,
+    Comentarios varchar2(50 BYTE),
+PRIMARY KEY(CodTratamiento,Id_mascota,FechaExamen),
+FOREIGN KEY (CodTratamiento) REFERENCES TipoTratamiento(CodTratamiento),
+FOREIGN KEY (Id_mascota,FechaExamen) REFERENCES examen(Id_mascota,FechaExamen)
+);
+CREATE TABLE corral(
+  Id_corral number(10,0) NOT NULL,
+  Id_mascota number(10,0) NOT NULL,
+  FechaExamen DATE NOT NULL,
+  Estado varchar2(20 BYTE) NOT NULL,
+  Fecha_ingreso DATE NOT NULL,
+  Fecha_salida DATE NOT NULL,
+  Comentarios varchar2(50 BYTE) NOT NULL,
+  CodTratamiento number(10,0) NOT NULL,
+  PRIMARY KEY (Id_corral,Id_mascota),
+  FOREIGN KEY (Id_corral) REFERENCES corralxclinica(Id_corral),
+  FOREIGN KEY (Id_mascota,FechaExamen,CodTratamiento) REFERENCES tratamiento(Id_mascota,FechaExamen,CodTratamiento)
+);
+CREATE TABLE metodo_pago(
+    Cod_metodo number(*) NOT NULL,
+    metodo varchar2(20 BYTE) NOT NULL,
+    PRIMARY KEY (Cod_metodo)
+);
+CREATE TABLE factura(
+    Num_factura number(10,0) NOT NULL UNIQUE,
+    Fecha DATE NOT NULL,
+    Id_mascota number(10,0) NOT NULL,
+    FechaExamen DATE NOT NULL,
+    CodTratamiento number(10,0) NOT NULL,
+    FechaPago DATE,
+    Cod_metodo number(*) NOT NULL,
+    PRIMARY KEY (Num_factura, Id_mascota),
+    FOREIGN KEY (Cod_metodo) REFERENCES metodo_pago(Cod_metodo),
+    FOREIGN KEY (Id_mascota,FechaExamen,CodTratamiento) REFERENCES tratamiento(Id_mascota,FechaExamen,CodTratamiento)
+);
+CREATE OR REPLACE TRIGGER limite_repeticiones
+BEFORE INSERT ON corralxclinica
+FOR EACH ROW
+DECLARE
+  contador NUMBER;
+BEGIN
+  SELECT COUNT(*) INTO contador FROM corralxclinica WHERE NumClinica = :NEW.NumClinica;
+  
+  IF contador >= 30 THEN
+    RAISE_APPLICATION_ERROR(-20001, 'No se permite más de 30corrales en la misma clínica.');
+  END IF;
+END;
