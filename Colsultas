@@ -1,0 +1,150 @@
+CREATE VIEW consulta_1_P2 AS
+SELECT gerente.Nombre, clinica.DiClinica, clinica.NumClinica, telefono_clinica.telefono
+FROM clinica
+JOIN gerente ON clinica.NumClinica = gerente.NumClinica
+JOIN telefono_clinica ON clinica.NumClinica = telefono_clinica.NumClinica
+ORDER BY clinica.NumClinica DESC;
+
+CREATE VIEW consulta_2_P2 AS
+SELECT dueño.documento,dueño.tipo_documento,dueño.Nombre,mascota.Nombre as Nombre_Mascota,mascota.Descripcion
+FROM dueño , mascota 
+WHERE dueño.documento=mascota.documento AND dueño.tipo_documento=mascota.tipo_documento
+ORDER BY dueño.nombre;
+
+CREATE VIEW consulta_3_P2 AS
+SELECT T.CodTratamiento, T.Fecha_inicio, T.Fecha_finaliza, T.Comentarios
+FROM tratamiento T
+INNER JOIN examen E ON T.Id_mascota = E.id_mascota AND T.fechaexamen = E.fechaexamen
+WHERE E.id_mascota = 4 AND E.fechaexamen = TO_DATE('2023-10-07', 'YYYY-MM-DD');
+
+CREATE VIEW consulta_4_P2 AS
+SELECT F.Num_factura AS NumeroFactura,
+       F.Fecha AS FechaFactura,
+       F.FechaPago AS FechaPago,
+       T.Id_mascota AS IdMascota,
+       T.FechaExamen AS FechaExamen,
+       T.CodTratamiento AS CodigoTratamiento,
+       TT.Costo AS CostoTratamiento
+FROM factura F
+JOIN tratamiento T ON F.Id_mascota = T.Id_mascota
+                AND F.FechaExamen = T.FechaExamen
+                AND F.CodTratamiento = T.CodTratamiento
+JOIN mascota M ON F.Id_mascota = m.id_mascota
+JOIN dueño D ON m.documento = d.documento AND m.tipo_documento = d.tipo_documento
+JOIN tipotratamiento TT ON tt.codtratamiento = t.codtratamiento
+WHERE F.FechaPago IS NULL
+  AND D.Tipo_documento = 'C.E'  
+  AND D.Documento = '76384941' 
+ORDER BY F.Num_factura;
+
+CREATE VIEW consulta_5_P2 AS
+SELECT F.Num_factura AS NumeroFactura,
+       F.Fecha AS FechaFactura,
+       F.FechaPago AS FechaPago,
+       T.Id_mascota AS IdMascota,
+       T.FechaExamen AS FechaExamen,
+       T.CodTratamiento AS CodigoTratamiento,
+       TT.Costo AS CostoTratamiento
+FROM factura F
+JOIN tratamiento T ON F.Id_mascota = T.Id_mascota
+                AND F.FechaExamen = T.FechaExamen
+                AND F.CodTratamiento = T.CodTratamiento
+JOIN mascota M ON F.Id_mascota = m.id_mascota
+JOIN dueño D ON m.documento = d.documento AND m.tipo_documento = d.tipo_documento
+JOIN tipotratamiento TT ON tt.codtratamiento = t.codtratamiento
+WHERE F.FechaPago >= TO_DATE('2023-11-09', 'YYYY-MM-DD')
+ORDER BY F.Num_factura;
+
+CREATE VIEW consulta_6_P2 AS
+SELECT CL.NumClinica AS NumeroClinica,
+       CL.NombreClinica AS NombreClinica,
+       CX.Id_corral AS NumeroCorral
+FROM corralxclinica CX
+JOIN clinica CL ON CX.NumClinica = CL.NumClinica
+WHERE CL.CodCiudad = 1
+  AND NOT EXISTS (
+    SELECT *
+    FROM corral C
+    WHERE C.Id_corral = CX.Id_corral
+      AND TO_DATE('2023-10-18', 'YYYY-MM-DD') BETWEEN C.Fecha_ingreso AND C.Fecha_salida
+  )
+ORDER BY CL.NumClinica, CX.Id_corral;
+
+CREATE VIEW consulta_7_P2 AS
+SELECT NumClinica, SUM(SalarioAnual) AS SumaSalariosAnuales
+FROM empleados
+GROUP BY NumClinica
+ORDER BY NumClinica;
+
+CREATE VIEW consulta_8_P2 AS
+SELECT MAX(Costo) AS Costo_Maximo, MIN(Costo) AS Costo_Minimo, AVG(Costo) AS Costo_Promedio
+FROM TipoTratamiento;
+
+CREATE VIEW consulta_9_P2 AS
+SELECT tipo_mascota, COUNT(*) AS TotalMascotas
+FROM mascota
+GROUP BY tipo_mascota
+ORDER BY tipo_mascota;
+
+CREATE VIEW consulta_10_P2 AS
+SELECT Documento, Nombre
+FROM empleados
+WHERE (Posicion = 'Veterinario' OR Posicion = 'Cuidandero') AND 
+      ROUND(MONTHS_BETWEEN(SYSDATE, FechaNacimiento) / 12) > 50
+ORDER BY Nombre;
+
+CREATE VIEW consulta_11_P2 AS
+SELECT C.Fecha, TO_CHAR(C.Hora, 'HH:MI AM')as hora , C.NumClinica, C.Id_mascota
+FROM cita C
+WHERE C.Fecha = TO_DATE('2023-10-17', 'YYYY-MM-DD')
+      AND C.NumClinica = 123;
+
+CREATE VIEW consulta_12_P2 AS
+SELECT C.NombreClinica, COUNT(CC.Id_corral) AS TotalCorrales
+FROM clinica C
+LEFT JOIN corralxclinica CC ON C.NumClinica = CC.NumClinica
+GROUP BY C.NombreClinica
+ORDER BY C.NombreClinica;
+
+CREATE VIEW consulta_13_P2 AS
+SELECT f.Num_factura AS NumeroFactura,
+       f.Fecha AS FechaFactura,
+       d.Tipo_documento AS TipoDocumentoDueño,
+       d.Documento AS NumeroDocumentoDueño,
+       d.Nombre AS NombreDueño,
+       m.Nombre AS NombreMascota,
+       t.CodTratamiento AS CodigoTratamiento,
+       t.FechaExamen AS FechaExamen,
+       t.Cantidad AS CantidadTratamiento,
+       t.Fecha_inicio AS FechaInicioTratamiento,
+       t.Fecha_finaliza AS FechaFinalizacionTratamiento
+FROM factura f
+JOIN mascota m ON f.Id_mascota = m.id_mascota
+JOIN tratamiento t ON f.Id_mascota = t.Id_mascota
+                 AND f.FechaExamen = t.FechaExamen
+                 AND f.CodTratamiento = t.CodTratamiento
+JOIN dueño d ON m.documento = d.documento AND m.tipo_documento = d.tipo_documento
+WHERE f.Fecha BETWEEN TO_DATE('2020-01-01', 'YYYY-MM-DD') AND TO_DATE('2023-12-31', 'YYYY-MM-DD')
+ORDER BY f.Fecha DESC;
+
+CREATE VIEW consulta_14_P2 AS
+SELECT Nombre AS NombreMascota, Descripcion AS DescripcionMascota
+FROM mascota 
+WHERE Tipo_documento = 'T.I' AND Documento = 31726375;
+
+CREATE VIEW consulta_15_P2 AS
+SELECT C.NombreClinica AS NombreClinica, SF.Nombre AS NombreSuministro, SF.cantidad_stock AS StockActual
+FROM clinica C
+INNER JOIN suministrosfarmac SF ON C.NumClinica = SF.NumClinica
+WHERE SF.Nivel_reorden = 'alto'
+ORDER BY C.NombreClinica, SF.Nombre;
+
+CREATE VIEW consulta_16_P2 AS
+SELECT C.NombreClinica AS NombreClinica,
+       SUM(SB.Costo * SB.cantidad_stock) AS CostoTotalSuministrosBase,
+       SUM(SF.Costo * SF.cantidad_stock) AS CostoTotalSuministrosFarmac
+FROM clinica C
+LEFT JOIN suministrosbase SB ON C.NumClinica = SB.NumClinica
+LEFT JOIN suministrosfarmac SF ON C.NumClinica = SF.NumClinica
+GROUP BY C.NombreClinica
+ORDER BY C.NombreClinica;
