@@ -23,7 +23,7 @@ Asegúrate de tener un entorno adecuado para ejecutar la base de datos. Esto pue
 Sigue las instrucciones en la sección 'Creacion_tablas' para crear la base de datos y llenarla con datos de ejemplo.
 
 ###  Verificación del Funcionamiento
-Utiliza las consultas proporcionadas en la sección 'Queries' para verificar que la base de datos está funcionando correctamente.
+Utiliza las consultas proporcionadas en la sección 'Consultas' para verificar que la base de datos está funcionando correctamente.
 
 ### Licencia
 Este proyecto está bajo la Licencia Oracle SQL.
