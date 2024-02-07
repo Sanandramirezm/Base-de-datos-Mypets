@@ -1,0 +1,897 @@
+--------------Ciudades------------------------
+INSERT INTO ciudades(CodCiudad, NombreCiudad) VALUES(1,'Bogota');
+INSERT INTO ciudades(CodCiudad, NombreCiudad) VALUES(2,'Medellin');
+INSERT INTO ciudades(CodCiudad, NombreCiudad) VALUES(3,'Cali');
+INSERT INTO ciudades(CodCiudad, NombreCiudad) VALUES(4,'Barranquilla');
+INSERT INTO ciudades(CodCiudad, NombreCiudad) VALUES(5,'Cartagena');
+
+--------------Clinica------------------------
+INSERT INTO clinica(NumClinica, NombreClinica, DiClinica, Fax, CodCiudad) VALUES(123,'Pupis 119','CLL 119 #45A-9',9211,1);
+INSERT INTO clinica(NumClinica, NombreClinica, DiClinica, Fax, CodCiudad) VALUES(234,'Pupis 89', 'KR 80C #80-48',2178,1);
+INSERT INTO clinica(NumClinica, NombreClinica, DiClinica, Fax, CodCiudad) VALUES(345,'Pupis AV 86','AV 86 #119C-81',6566,1);
+INSERT INTO clinica(NumClinica, NombreClinica, DiClinica, Fax, CodCiudad) VALUES(456,'Pupis la 200','CLL 200 #37B-10',1114,1);
+INSERT INTO clinica(NumClinica, NombreClinica, DiClinica, Fax, CodCiudad) VALUES(567,'Pupis la quinta','KR 5 #38-67',2389,2);
+INSERT INTO clinica(NumClinica, NombreClinica, DiClinica, Fax, CodCiudad) VALUES(678,'Pupis la octava','AV 68 KR 8 #34',5390,2);
+INSERT INTO clinica(NumClinica, NombreClinica, DiClinica, Fax, CodCiudad) VALUES(789,'Pupis 116','CLL 116 #67-3',0087,2);
+INSERT INTO clinica(NumClinica, NombreClinica, DiClinica, Fax, CodCiudad) VALUES(890,'Pupis 23','CLL 23 KR 9 #27-45',0085,3);
+INSERT INTO clinica(NumClinica, NombreClinica, DiClinica, Fax, CodCiudad) VALUES(901,'Pupis la 45', 'AV 5 CLL 45-89',2309,3);
+INSERT INTO clinica(NumClinica, NombreClinica, DiClinica, Fax, CodCiudad) VALUES(012,'Pupis 234','CLL 6 #234-1',8365,4);
+INSERT INTO clinica(NumClinica, NombreClinica, DiClinica, Fax, CodCiudad) VALUES(210,'Pupis AV 13','AV 13 KR 4',7420,4);
+INSERT INTO clinica(NumClinica, NombreClinica, DiClinica, Fax, CodCiudad) VALUES(109,'Pupis 34','CLL 34 #25-2',0273,5);
+INSERT INTO clinica(NumClinica, NombreClinica, DiClinica, Fax, CodCiudad) VALUES(098,'Pupis la cuarta','KR 4 #298-9',9263,5);
+
+--------------telefono_clinica------------------------
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(123, 3213133001);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(123, 3008787874);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(123, 3244604985);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(234, 3009876253);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(234, 3184528804);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(345, 3001336782);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(345, 3167820538);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(345, 3291847839);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(456, 3002927382);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(567, 3002914830);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(567, 3290863728);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(567, 3298679879);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(678, 3746192648);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(678, 3029618392);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(789, 3209837290);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(789, 3291837028);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(789, 3482912973);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(890, 3145938729);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(890, 3172839027);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(901, 3291730273);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(012, 3382923323);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(012, 3927173829);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(012, 3003040058);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(210, 3002989132);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(210, 3178253629);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(210, 3362922927);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(109, 3292227382);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(109, 3108280222);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(098, 3002828299);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(098, 3228173911);
+INSERT INTO telefono_clinica(NumClinica, telefono) VALUES(098, 3929292229);
+
+--------------Empleados------------------------
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(1023362518, 'C.C', 'Flor Rodriguez','femenino','KR 49 CLL 78','01-JAN-1987','Veterinario',45000000, 3928738393, 123);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(500747, 'C.E', 'Juana Martinez','femenino','CLL 85A-26','29-AUG-1973','Recepcionista',13000000, 3289897635, 123);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(1000160840, 'C.C', 'Sancho Panza','masculino','AV 54 #11A-1','09-OCT-2000','Practicante',12500000, 3009898987, 123);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(79321092, 'C.C', 'Eduardo Niche','masculino','KR 17A-12','02-FEB-1988','Cirujano',55000000, 3138903457, 123);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(1089725648, 'C.C', 'Diomedes zambrano','masculino','KR 17A-12','30-MAR-2004','Practicante',5000000, 3009898982, 123);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(1098546356, 'C.C', 'Margarita Sanchez','femenino','CLL 87A-89','30-JUN-1967','Recepcionista',12500000, 3002322321, 234);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(51986308, 'C.C', 'Pilar Rojas','femenino','KR 56B- 200','15-SEP-1987','Cirujano',56000000, 3002345678, 234);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(234595, 'C.E', 'Don Quijote','masculino','AV 85B #45-28','17-MAY-1957','Cuidandero',9500000, 3092828382, 234);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(1192817462, 'C.C', 'Feid Bunny','masculino','KR29 #98C','26-JUL-1967','Veterinario',60000000, 3982719374, 234);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(79492740, 'C.C', 'Paola Duran','femenino','CLL 56F-89','08-NOV-1988','Cuidandero',10000000, 3277302821, 345);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(1028937645, 'C.C', 'Sofia Guzman','femenino','CLL 200-67D','03-DEC-1987','Cirujano',40000000,3940339203, 345);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(987638, 'C.E', 'Pancracio Jimenez','masculino','CLL 87-45J','29-JAN-1998','Practicante',7000000, 3362810384, 345);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(59281693, 'C.C', 'Alejandra Guitierrez','femenino','CLL 84H-39','18-FEB-1978','Veterinario',56000000, 3092739302, 345);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(1028764537, 'C.C', 'Martha Alba','femenino','AV 64-98J','24-APR-1987','Recepcionista',12345000, 3482973784, 456);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(76845327, 'C.C', 'Angelica Gonzalez','femenino','KR 89D-5','16-JUN-1997','Veterinario',46000000, 3008787872, 456);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(983928, 'C.E', 'Natalia Camargo','femenino','KR 67D-34','18-DEC-1998','Cuidandero',14000000, 3849783739, 567);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(567093, 'C.E', 'Viviana Bernal','femenino','KR 56F #45-87','28-JAN-1987','Recepcionista',11400000, 3009898734, 567);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(1087987265, 'C.C', 'Amparo Grisales','femenino','KR 45-67','13-JAN-2000','Recepcionista',11500000, 3298783928, 567);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(1987567354, 'C.C', 'Mario Casas','masculino','CLL 89-34S','05-FEB-1967','Cirujano',70000000, 3006767674, 678);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(560987, 'C.E', 'Silvestre Castro','masculino','CLL 87 #98-78C','10-NOV-1956','Recepcionista',12000000, 3004343432, 678);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(1023789567, 'C.C', 'Santiago Mario','masculino','KR 45-65','08-MAY-1999','Practicante',12000000, 3008787837, 678);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(568989, 'C.E', 'Juliana Perez','femenino','CLL 89-34','09-JUL-1979','Cuidandero',9000000, 3009898482, 678);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(1098764837,'C.C','Juanita Ramero','femenino','CLL 67-48G','18-SEP-1987','Veterinario',50000000, 3398765378,678);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(28976584, 'C.C', 'Daniel Bohorquez','masculino','CLL 89-75','15-OCT-1967','Recepcionista',10500000, 3987093457, 789);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(584678, 'C.E', 'Aurelio Melano','masculino','KR 45 #1-4','11-AUG-1958','Cuidandero',13900000, 3009898983, 789);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(678903,'C.E','Harry Swift','masculino','AV 60 KR 47-89','01-DEC-2003','Practicante',11230000, 3001234567,789);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(1096483789,'C.C', 'Serena Robayo','femenino','CLL 6 #3-90','08-MAR-1989','Cirujano',56900000, 3498787872, 789);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(1028736018,'C.C','Pedro Picapiedra','masculino','CLL 98-45H','05-JAN-1967','Cuidandero',7500000,3109893956,890);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(87267093,'C.C','Kim Kardashan','femenino','KR 98-98A','07-JUN-1995','Practicante',8900000, 3001234567,890);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(1027894567,'C.C','Cristian Ferrero','masculino','CLL 89-45G','08-JUL-1984','Cirujano',65000000,3154897808,890);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(79456321,'C.C','Adolfo Quiroga','masculino','AV 32 CLL 98-76','23-NOV-1964','Recepcionista',12000000,3124098749,901);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(560287,'C.E','Monica Duarte','femenino','KR 89 #8-38','12-DEC-1987','Cirujano',88000000,3128976453,901);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(98763528,'C.C','John Andrade','masculino','AV 17 #3-87','20-MAR-1996','Cuidandero',16000000, 3139876093,012);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(1078348902,'C.C','Manuel Falcao','masculino','KR 46-89D','30-OCT-1991','Recepcionista',14000000,3098760498,210);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(8937281,'C.C','Mark Antony','masculino','CLL 60-45','29-JAN-1958','Cirujano',69000000, 3001234567,210);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(1037804980,'C.C','Nico Jurado','masculino','Cll 98-32A','26-JUL-1994','Practicante',15000000, 3278903456,210);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(4039876,'C.C','Manuela Roa','femenino','CLL 98 KR 45','19-AUG-1987','Veterinario',489000000,3509873091,210);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(1023987654,'C.C','David Gutierrez','masculino','CLL 89A-8','16-OCT-2002','Practicante',13000000,3209897237,109);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(78937629,'C.C','Edna Moda','femenino','CLL 89-300D','31-DEC-1960','Cirujano',56890000,3109876392,109);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(1987340982,'C.C','Amara Quelinda','femenino','CLL 186B #69-7','18-APR-2003','Practicante',13000000,14000000,098);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(549028,'C.E','Mateo Alzate','masculino','CLL 69-9D','14-APR-1987','Veterinario',50000000,3209809870,098);
+INSERT INTO empleados(Documento, TipoDocumento, Nombre, Sexo, Direccion, FechaNacimiento, Posicion, SalarioAnual, Telefono, NumClinica) VALUES(539089,'C.E','Felipe Urrutia','masculino','CLL 89 KR 46','17-APR-1996','Recepcionista',14300000,3129092897,098);
+
+--------------Gerente------------------------
+INSERT INTO gerente(Documento, TipoDocumento, Nombre, Sexo, DIreccion, FechaNacimiento, SalarioAnual, Telefono, NumClinica) VALUES(98789397,'C.C','Sarah Rios','femenino','CLL 123 #109-2C','16-JAN-1974',72000000,3198976639,123);
+INSERT INTO gerente(Documento, TipoDocumento, Nombre, Sexo, DIreccion, FechaNacimiento, SalarioAnual, Telefono, NumClinica) VALUES(89457209,'C.C','Epa Colombia','femenino','KR 134 #17G','19-OCT-1980',80000000,3209876383,234);
+INSERT INTO gerente(Documento, TipoDocumento, Nombre, Sexo, DIreccion, FechaNacimiento, SalarioAnual, Telefono, NumClinica) VALUES(98564012,'C.C','Oscar Diaz','masculino','AV 69-34C','04-SEP-1960',71000000,3209873908,345);
+INSERT INTO gerente(Documento, TipoDocumento, Nombre, Sexo, DIreccion, FechaNacimiento, SalarioAnual, Telefono, NumClinica) VALUES(37893049,'C.C','Fernando Garcia','masculino','CLL 34B-29','26-FEB-1959',63000000,3490839267,456);
+INSERT INTO gerente(Documento, TipoDocumento, Nombre, Sexo, DIreccion, FechaNacimiento, SalarioAnual, Telefono, NumClinica) VALUES(17493802,'C.C','Matias Galeto','masculino','KR 34  #32-98','26-MAR-1989',82000000,3198467803,567);
+INSERT INTO gerente(Documento, TipoDocumento, Nombre, Sexo, DIreccion, FechaNacimiento, SalarioAnual, Telefono, NumClinica) VALUES(37849102,'C.C','Federico Sarmiento','masculino','AV 21-30F','03-APR-1990',60000000,3102830987,678);
+INSERT INTO gerente(Documento, TipoDocumento, Nombre, Sexo, DIreccion, FechaNacimiento, SalarioAnual, Telefono, NumClinica) VALUES(98648938,'C.C','Olivia Carpenter','femenino','CLL 83B-98','01-JUN-1994',69500000,3129876032,789);
+INSERT INTO gerente(Documento, TipoDocumento, Nombre, Sexo, DIreccion, FechaNacimiento, SalarioAnual, Telefono, NumClinica) VALUES(54309873,'C.C','Karol Rivera','femenino','KR 67-39Y','04-JUL-1969',59000000,3985029876,890);
+INSERT INTO gerente(Documento, TipoDocumento, Nombre, Sexo, DIreccion, FechaNacimiento, SalarioAnual, Telefono, NumClinica) VALUES(98358263,'C.C','Laura Paez','femenino','CLL 76-45H','13-AUG-1985',67900000,3298765902,901);
+INSERT INTO gerente(Documento, TipoDocumento, Nombre, Sexo, DIreccion, FechaNacimiento, SalarioAnual, Telefono, NumClinica) VALUES(54321678,'C.C','Pablo Rincon','masculino','AV 56B-98','20-SEP-1985',67000000,3029840392,012);
+INSERT INTO gerente(Documento, TipoDocumento, Nombre, Sexo, DIreccion, FechaNacimiento, SalarioAnual, Telefono, NumClinica) VALUES(95678901,'C.C','Carlos Bermudez','masculino','CLL 23 #10-9','07-OCT-1987',79000000,3489020369,210);
+INSERT INTO gerente(Documento, TipoDocumento, Nombre, Sexo, DIreccion, FechaNacimiento, SalarioAnual, Telefono, NumClinica) VALUES(93804567,'C.C','Yina Calderon','femenino','AV 56-38J','02-NOV-1950',78000000,3456789087,109);
+INSERT INTO gerente(Documento, TipoDocumento, Nombre, Sexo, DIreccion, FechaNacimiento, SalarioAnual, Telefono, NumClinica) VALUES(47382979,'C.C','Vanessa Castiblanco','femenino','KR 34-78B','25-DEC-1974',67400000,3029309496,098);
+
+--------------corralxclinica------------------------
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(1,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(2,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(3,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(4,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(5,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(6,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(7,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(8,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(9,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(10,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(11,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(12,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(13,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(14,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(15,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(16,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(17,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(18,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(19,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(20,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(21,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(22,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(23,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(24,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(25,123);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(26,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(27,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(28,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(29,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(30,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(31,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(32,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(33,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(34,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(35,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(36,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(37,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(38,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(39,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(40,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(41,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(42,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(43,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(44,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(45,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(46,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(47,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(48,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(49,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(50,234);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(51,345);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(52,345);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(53,345);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(54,345);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(55,345);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(56,345);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(57,345);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(58,345);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(59,345);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(60,345);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(61,345);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(62,345);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(63,345);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(64,345);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(65,345);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(67,345);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(68,345);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(69,345);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(70,345);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(71,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(72,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(73,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(74,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(75,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(76,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(77,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(78,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(79,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(80,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(81,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(82,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(83,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(84,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(85,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(86,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(87,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(88,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(89,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(90,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(91,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(92,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(93,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(94,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(95,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(96,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(97,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(98,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(99,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(100,456);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(101,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(102,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(103,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(104,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(105,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(106,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(107,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(108,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(109,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(110,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(111,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(112,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(113,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(114,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(115,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(116,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(117,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(118,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(119,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(120,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(121,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(122,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(123,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(124,567);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(125,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(126,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(127,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(128,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(129,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(130,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(131,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(132,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(133,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(134,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(135,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(136,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(137,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(138,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(139,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(140,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(141,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(142,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(143,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(144,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(145,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(146,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(147,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(148,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(149,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(150,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(151,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(152,678);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(153,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(154,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(155,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(156,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(157,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(158,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(159,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(160,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(161,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(162,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(163,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(164,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(165,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(166,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(167,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(168,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(169,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(170,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(171,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(172,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(173,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(174,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(175,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(176,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(177,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(178,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(179,789);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(180,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(181,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(182,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(183,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(184,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(185,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(186,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(187,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(188,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(189,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(190,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(191,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(192,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(193,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(194,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(195,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(196,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(197,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(198,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(199,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(200,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(201,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(202,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(203,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(204,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(205,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(206,890);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(207,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(208,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(209,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(210,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(211,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(212,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(213,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(214,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(215,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(216,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(217,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(218,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(219,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(220,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(221,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(222,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(223,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(224,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(225,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(226,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(227,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(228,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(229,901);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(230,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(231,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(232,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(233,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(234,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(235,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(236,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(237,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(238,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(239,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(240,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(241,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(242,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(243,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(244,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(245,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(246,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(247,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(248,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(249,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(250,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(251,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(252,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(253,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(254,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(255,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(256,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(257,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(258,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(259,012);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(260,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(261,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(262,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(263,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(264,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(265,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(266,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(267,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(268,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(269,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(270,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(271,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(272,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(273,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(274,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(275,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(276,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(277,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(278,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(279,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(280,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(281,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(282,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(283,210);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(284,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(285,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(286,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(287,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(288,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(289,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(290,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(291,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(292,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(293,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(294,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(295,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(296,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(297,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(298,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(299,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(300,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(301,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(302,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(303,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(304,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(305,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(306,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(307,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(309,109);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(310,098);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(311,098);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(312,098);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(313,098);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(314,098);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(315,098);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(316,098);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(317,098);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(318,098);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(319,098);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(320,098);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(321,098);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(322,098);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(323,098);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(324,098);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(325,098);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(326,098);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(327,098);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(328,098);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(329,098);
+INSERT INTO corralxclinica(Id_corral, NumClinica) VALUES(330,098);
+
+--------------suministrosbase------------------------
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','1ml con aguja 25G x 5/8',20,'alto',8,30000,123);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','3ml con aguja 23G x 1',14,'bajo',5,33000,123);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','3ml con aguja 25G x 5/8',25,'medio',10,36500,123);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','5ml con aguja 21G x 1 1/4',18,'alto',6,38500,123);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','10ml con aguja 21G x 1 1/4',10,'bajo',4,40000,123);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Apositos','Hidrogel',10,'alto',2,20000,123);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Apositos','Hidrocoloide',7,'alto',3,25000,123);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Vendajes','Para heridas abiertas, fractura o cirugia',45,'alto',24,12000,123);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Bolsas plasticas','30cm x 30cm',100,'alto',28,80,123);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Delantales','de plastico',30,'alto',10,3000,123);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Bandeja de Arena','de 60cm x 70cm',10,'bajo',2,40000,123);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Alimento','bolsa de 15 kg para perros',50,'medio',6,120000,123);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Alimento','bolsa de 4 kg para gatos',30,'bajo',8,56000,123);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Etiquetas','con nombres',100,'alto',25,2000,123);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','3ml con aguja 23G x 1',23,'medio',6,33500,234);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','5ml con aguja 21G x 1 1/4',10,'bajo',2,39000,234);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','10ml con aguja 21G x 1 1/4',19,'alto',2,40500,234);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Apositos','Hidrogel',5,'medio',4,22700,234);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Vendajes','Para heridas abiertas, fractura o cirugia',30,'alto',7,13900,234);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Bolsas plasticas','30cm x 30cm',95,'medio',20,90,234);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Delantales','de plastico',20,'alto',13,3500,234);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Bandeja de Arena','de 60cm x 70cm',70,'medio',6,42000,234);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Alimento','bolsa de 15 kg para perros',60,'alto',12,125000,234);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Alimento','bolsa de 4 kg para gatos',23,'bajo',5,57500,234);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Etiquetas','con nombres',120,'alto',14,2080,234);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','1ml con aguja 25G x 5/8',10,'bajo',4,28000,345);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','3ml con aguja 23G x 1',10,'alto',6,30000,345);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','3ml con aguja 25G x 5/8',8,'medio',7,30500,345);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Apositos','Hidrogel',14,'alto',3,29000,345);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Apositos','Hidrocoloide',3,'medio',5,25000,345);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Vendajes','Para heridas abiertas, fractura o cirugia',30,'bajo',17,11000,345);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Bolsas plasticas','30cm x 30cm',50,'alto',15,75,345);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Bandeja de Arena','de 60cm x 70cm',17,'bajo',8,45000,345);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Alimento','bolsa de 15 kg para perros',30,'alto',8,119000,345);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Alimento','bolsa de 4 kg para gatos',20,'medio',5,50000,345);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','1ml con aguja 25G x 5/8',29,'alto',8,31200,456);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','5ml con aguja 21G x 1 1/4',10,'bajo',5,30000,456);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Apositos','Hidrocoloide',8,'alto',4,25600,456);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Vendajes','Para heridas abiertas, fractura o cirugia',78,'alto',28,12400,456);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Bolsas plasticas','30cm x 30cm',500,'medio',29,55,456);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Alimento','bolsa de 15 kg para perros',40,'medio',4,120500,456);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Alimento','bolsa de 4 kg para gatos',39,'medio',9,56400,456);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','1ml con aguja 25G x 5/8',20,'alto',8,30000,567);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','3ml con aguja 23G x 1',8,'medio',3,32000,567);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','3ml con aguja 25G x 5/8',20,'alto',9,33000,567);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','5ml con aguja 21G x 1 1/4',10,'medio',4,3500,567);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','10ml con aguja 21G x 1 1/4',5,'alto',3,36000,567);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Apositos','Hidrogel',40,'bajo',6,15000,567);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Apositos','Hidrocoloide',9,'alto',7,30000,567);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Vendajes','Para heridas abiertas, fractura o cirugia',40,'bajo',27,30000,567);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Bolsas plasticas','30cm x 30cm',94,'bajo',27,50,567);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','10ml con aguja 21G x 1 1/4',8,'alto',4,38600,678);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Apositos','Hidrogel',9,'alto',3,34000,678);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Vendajes','Para heridas abiertas, fractura o cirugia',40,'alto',20,18000,678);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Delantales','de plastico',10,'alto',4,4000,678);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Bandeja de Arena','de 60cm x 70cm',20,'alto',7,48000,678);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Alimento','bolsa de 15 kg para perros',30,'alto',9,128900,678);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Alimento','bolsa de 4 kg para gatos',15,'alto',9,56800,678);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','1ml con aguja 25G x 5/8',29,'bajo',9,30890,789);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','3ml con aguja 23G x 1',19,'bajo',8,20900,789);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Apositos','Hidrogel',9,'bajo',7,15000,789);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Apositos','Hidrocoloide',4,'bajo',5,20000,789);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Vendajes','Para heridas abiertas, fractura o cirugia',30,'bajo',16,6000,789);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Bolsas plasticas','30cm x 30cm',1000,'bajo',59,40,789);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Delantales','de plastico',20,'bajo',5,2000,789);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Bandeja de Arena','de 60cm x 70cm',8,'bajo',6,45000,789);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','1ml con aguja 25G x 5/8',10,'medio',4,30500,890);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','3ml con aguja 23G x 1',7,'medio',3,33500,890);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','3ml con aguja 25G x 5/8',13,'bajo',5,32000,890);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','5ml con aguja 21G x 1 1/4',9,'bajo',3,39500,890);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','10ml con aguja 21G x 1 1/4',5,'alto',2,40500,890);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Apositos','Hidrogel',5,'medio',2,1000,890);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Apositos','Hidrocoloide',3,'medio',2,25800,890);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Vendajes','Para heridas abiertas, fractura o cirugia',23,'medio',12,13900,890);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Bolsas plasticas','30cm x 30cm',50,'alto',14,50,890);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Delantales','de plastico',15,'medio',5,3000,890);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Bandeja de Arena','de 60cm x 70cm',5,'medio',1,40900,890);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Alimento','bolsa de 15 kg para perros',25,'bajo',3,120000,890);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Alimento','bolsa de 4 kg para gatos',15,'medio',2,56900,890);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Etiquetas','con nombres',50,'alto',12,2050,890);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Apositos','Hidrogel',9,'alto',6,20400,901);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Apositos','Hidrocoloide',24,'bajo',8,25050,901);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Vendajes','Para heridas abiertas, fractura o cirugia',20,'alto',27,12500,901);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Alimento','bolsa de 15 kg para perros',7,'medio',0,120000,901);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Alimento','bolsa de 4 kg para gatos',15,'bajo',4,56000,901);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Etiquetas','con nombres',54,'bajo',14,2000,901);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','1ml con aguja 25G x 5/8',30,'medio',1,30200,012);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','3ml con aguja 23G x 1',84,'bajo',48,33500,012);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','3ml con aguja 25G x 5/8',49,'medio',18,39000,012);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','5ml con aguja 21G x 1 1/4',9,'bajo',9,20900,012);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','10ml con aguja 21G x 1 1/4',90,'medio',5,40500,012);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Apositos','Hidrogel',60,'medio',4,20300,012);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Alimento','bolsa de 15 kg para perros',25,'medio',89,120000,012);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Alimento','bolsa de 4 kg para gatos',36,'medio',28,56900,012);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Etiquetas','con nombres',90,'alto',46,2050,012);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','1ml con aguja 25G x 5/8',10,'alto',4,30900,210);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','3ml con aguja 23G x 1',19,'alto',4,33600,210);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','3ml con aguja 25G x 5/8',20,'bajo',14,32500,210);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','5ml con aguja 21G x 1 1/4',29,'medio',9,28500,210);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','10ml con aguja 21G x 1 1/4',9,'alto',5,39800,210);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Apositos','Hidrogel',19,'alto',7,20300,210);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Apositos','Hidrocoloide',34,'alto',16,25500,210);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Vendajes','Para heridas abiertas, fractura o cirugia',39,'alto',28,120300,109);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Bolsas plasticas','30cm x 30cm',190,'alto',68,66,109);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Delantales','de plastico',20,'bajo',15,3030,109);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Bandeja de Arena','de 60cm x 70cm',34,'alto',26,40500,109);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Alimento','bolsa de 15 kg para perros',100,'alto',7,125000,109);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Alimento','bolsa de 4 kg para gatos',20,'medio',10,57900,109);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Etiquetas','con nombres',99,'bajo',24,2300,109);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','1ml con aguja 25G x 5/8',102,'alto',8,32030,098);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','3ml con aguja 23G x 1',28,'medio',24,33500,098);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','3ml con aguja 25G x 5/8',283,'medio',183,36550,098);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','5ml con aguja 21G x 1 1/4',192,'bajo',7,39000,098);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Jeringas','10ml con aguja 21G x 1 1/4',293,'medio',45,20000,098);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Apositos','Hidrogel',56,'alto',23,20050,098);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Apositos','Hidrocoloide',83,'medio',8,24000,098);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('Quirurgico', 'Vendajes','Para heridas abiertas, fractura o cirugia',234,'medio',83,12500,098);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Bolsas plasticas','30cm x 30cm',120,'medio',24,90,098);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Delantales','de plastico',175,'alto',12,3080,098);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Bandeja de Arena','de 60cm x 70cm',30,'medio',4,40300,098);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Alimento','bolsa de 15 kg para perros',234,'medio',45,120300,098);
+INSERT INTO suministrosbase(Tipo, Nombre, Descripcion, cantidad_stock, Nivel_reorden, cantidad_repedido, Costo, NumClinica) VALUES('No Quirurgico', 'Alimento','bolsa de 4 kg para gatos',283,'bajo',34,56500,098);
+
+--------------suministrosfarmac------------------------
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica)
+VALUES('Analgésicos','Ibuprofeno',1,'Oral',6,'alto',23,50000,1,123);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antiinflamatorios','Paracetamol',3,'Rectal',8,'medio',12,80000,2,234);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Analgésicos','Lisinopril',4,'Oral',6,'alto',26,57000,3,345);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antibióticos','Simvastatina',1,'Rectal',13,'medio',12,89000,4,456);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Analgésicos','Amoxicilina',4,'Oral',31,'alto',5,69000,5,567);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antibióticos','Omeprazol',2,'Rectal',23,'medio',4,128000,6,678);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Analgésicos','Metformina',4,'Oral',17,'bajo',40,500000,7,789);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antibióticos','Atorvastatina',3,'Tópica',18,'medio',15,150000,8,890);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antiinflamatorios','Losartán',1,'Oral',13,'medio',16,170000,9,901);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Analgésicos','Prednisona',3,'Rectal',11,'alto',4,80000,10,12);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Hipotensores','Alprazolam',2,'Oral',19,'medio',21,590000,11,210);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antiinflamatorios','Levotiroxina',4,'Tópica',21,'alto',10,400000,12,109);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Analgésicos','Citalopram',5,'Oral',27,'alto',1,20000,13,98);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Hipotensores','Sertralina',1,'Rectal',19,'bajo',5,120000,14,123);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antiinflamatorios','Metoprolol',2,'Oral',23,'bajo',21,40000,15,234);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antidepresivos','Furosemida',3,'Rectal',16,'alto',12,53000,16,234);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antibióticos','Lorazepam',1,'Oral',19,'alto',31,20000,17,123);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antipsicóticos','Clonazepam',5,'Rectal',26,'medio',61,900000,18,345);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antiinflamatorios','Ranitidina',3,'Oral',17,'alto',1,10000,19,456);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antidepresivos','Doxiciclina',4,'Tópica',15,'medio',15,70000,20,345);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antidepresivos','Warfarina',1,'Rectal',1,'bajo',10,55000,21,123);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Hipotensores','Insulina glargina',2,'Rectal',2,'alto',17,80000,22,345);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Anticonvulsivantes','Risperidona',4,'Intranasal',7,'medio',7,43700,23,567);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antihistamínicos','Hidroclorotiazida',3,'Oral',5,'bajo',1,6000,24,123);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antiinflamatorios','Tramadol',1,'Rectal',9,'alto',12,89000,25,345);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Analgésicos','Escitalopram',3,'Oral',5,'medio',16,90000,26,123);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antipsicóticos','Duloxetina',5,'Oral',12,'alto',35,650000,27,567);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Anticonvulsivantes','Metronidazol',1,'Rectal',5,'medio',12,430000,28,456);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antidepresivos','Gabapentina',2,'Oral',21,'bajo',13,67000,29,123);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antiinflamatorios','Amlodipina',3,'Rectal',17,'medio',16,35000,30,567);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antipsicóticos','Quetiapina',5,'Oral',13,'alto',16,35000,31,123);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antipsicóticos','Loratadina',4,'Intranasal',19,'medio',13,57000,32,234);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antihistamínicos','Ciprofloxacina',1,'Intranasal',14,'bajo',15,66000,33,456);
+INSERT INTO suministrosfarmac(Tipo,Nombre,Dosis,Administracion,cantidad_stock,Nivel_reorden,cantidad_repedido,Costo ,Id_med ,NumClinica )
+VALUES('Antiinflamatorios','Fluoxetina',4,'Oral',13,'alto',20,90000,34,234);
+
+--------------Dueño------------------------
+INSERT INTO dueño(Documento, Tipo_Documento, Nombre, DIreccion, Telefono_casa) VALUES(16325303, 'C.C', 'Luis Rodríguez', 'Avenida 57 #123', 6395511544);
+INSERT INTO dueño(Documento, Tipo_Documento, Nombre, DIreccion, Telefono_casa) VALUES(25180049, 'T.I', 'María López', 'Carrera 17 #789', 6347074919);
+INSERT INTO dueño(Documento, Tipo_Documento, Nombre, DIreccion, Telefono_casa) VALUES(31726375, 'T.I', 'Pedro Gómez', 'Carrera 41 #789', 6497811781);
+INSERT INTO dueño(Documento, Tipo_Documento, Nombre, DIreccion, Telefono_casa) VALUES(94134697, 'T.I', 'Andres Gómez', 'Carrera 1 #789', 6726855408);
+INSERT INTO dueño(Documento, Tipo_Documento, Nombre, DIreccion, Telefono_casa) VALUES(27377571, 'C.C', 'Alejandra Ramirez', 'Avenida 22 #45', 6447407078);
+INSERT INTO dueño(Documento, Tipo_Documento, Nombre, DIreccion, Telefono_casa) VALUES(44603249, 'C.E', 'Juan Pérez', 'Calle 14 #101', 6897656004);
+INSERT INTO dueño(Documento, Tipo_Documento, Nombre, DIreccion, Telefono_casa) VALUES(42843403, 'T.I', 'Ana Martínez', 'Avenida 5 #123', 6023635802);
+INSERT INTO dueño(Documento, Tipo_Documento, Nombre, DIreccion, Telefono_casa) VALUES(76384941, 'C.E', 'Eduardo Gómez', 'Calle 14 #11', 6546517938);
+INSERT INTO dueño(Documento, Tipo_Documento, Nombre, DIreccion, Telefono_casa) VALUES(88742976, 'C.E', 'María Salamanca', 'Avenida 22 #46', 6563209619);
+INSERT INTO dueño(Documento, Tipo_Documento, Nombre, DIreccion, Telefono_casa) VALUES(55615731, 'Pasaporte', 'Lucia Martínez', 'Calle 14 #1011', 6295811955);
+INSERT INTO dueño(Documento, Tipo_Documento, Nombre, DIreccion, Telefono_casa) VALUES(99789178, 'T.I', 'Pedro Torres', 'Avenida 22 #456', 6958310286);
+INSERT INTO dueño(Documento, Tipo_Documento, Nombre, DIreccion, Telefono_casa) VALUES(82831728, 'C.C', 'Laura Torres', 'Avenida 51 #1213', 6998073663);
+INSERT INTO dueño(Documento, Tipo_Documento, Nombre, DIreccion, Telefono_casa) VALUES(16398823, 'C.E', 'Juan Gómez', 'Carrera 33 #100', 6764341872);
+INSERT INTO dueño(Documento, Tipo_Documento, Nombre, DIreccion, Telefono_casa) VALUES(69647764, 'Pasaporte', 'Laura Sanches', 'Carrera 3 #789', 6686333300);
+INSERT INTO dueño(Documento, Tipo_Documento, Nombre, DIreccion, Telefono_casa) VALUES(83941595, 'Pasaporte', 'Luis Montero', 'Avenida 5 #1213', 6090595634);
+INSERT INTO dueño(Documento, Tipo_Documento, Nombre, DIreccion, Telefono_casa) VALUES(46584941, 'C.E', 'Ian Valderrama', 'Calle 1 #123', 6893632059);
+INSERT INTO dueño(Documento, Tipo_Documento, Nombre, DIreccion, Telefono_casa) VALUES(15441586, 'Pasaporte', 'Ana Ramirez', 'Carrera 24 #749', 6767894088);
+INSERT INTO dueño(Documento, Tipo_Documento, Nombre, DIreccion, Telefono_casa) VALUES(31731180, 'C.C', 'Esteban Paez', 'Calle 13 #1011', 6441091266);
+INSERT INTO dueño(Documento, Tipo_Documento, Nombre, DIreccion, Telefono_casa) VALUES(90430028, 'Pasaporte', 'Lorena Torres', 'Calle 3 #126', 6793939617);
+INSERT INTO dueño(Documento, Tipo_Documento, Nombre, DIreccion, Telefono_casa) VALUES(98852338, 'C.E', 'Sara López', 'Avenida 5 #456', 6277565025);
+
+--------------Mascota------------------------
+INSERT INTO mascota(Documento, Tipo_Documento, id_mascota, nombre, tipo_mascota, descripcion, fechanacimiento, fecharegistro, estado)
+VALUES(16325303, 'C.C', 11, 'Rocky', 'Perro', 'Rocky es un perro de tamaño mediano con un pelaje suave y marrón. Tiene ojos grandes y expresivos', TO_DATE('2019-11-15', 'YYYY-MM-DD'), TO_DATE('2021-09-10', 'YYYY-MM-DD'), 'Vivo');
+INSERT INTO mascota(Documento, Tipo_Documento, id_mascota, nombre, tipo_mascota, descripcion, fechanacimiento, fecharegistro, estado)
+VALUES(25180049, 'T.I', 12, 'Bella', 'Gato', 'Bella es una gata de pelaje blanco y sedoso, con ojos azules y una cola esponjosa', TO_DATE('2020-06-12', 'YYYY-MM-DD'), TO_DATE('2022-07-25', 'YYYY-MM-DD'), 'Vivo');
+INSERT INTO mascota(Documento, Tipo_Documento, id_mascota, nombre, tipo_mascota, descripcion, fechanacimiento, fecharegistro, estado)
+VALUES(31726375, 'T.I', 13, 'Max', 'Perro', 'Max es un perro robusto de color dorado con orejas erguidas y una cola larga', TO_DATE('2018-03-28', 'YYYY-MM-DD'), TO_DATE('2021-05-14', 'YYYY-MM-DD'), 'Vivo');
+INSERT INTO mascota(Documento, Tipo_Documento, id_mascota, nombre, tipo_mascota, descripcion, fechanacimiento, fecharegistro, estado)
+VALUES(94134697, 'T.I', 14, 'Luna', 'Gato', 'Luna es una gata negra con un pequeño mechón de pelo blanco en el pecho y patas ágiles', TO_DATE('2017-12-03', 'YYYY-MM-DD'), TO_DATE('2020-11-01', 'YYYY-MM-DD'), 'Vivo');
+INSERT INTO mascota(Documento, Tipo_Documento, id_mascota, nombre, tipo_mascota, descripcion, fechanacimiento, fecharegistro, estado)
+VALUES(27377571, 'C.C', 15, 'Charlie', 'Perro', 'Charlie es un perro de raza mixta con un pelaje moteado y una cola larga y esponjosa', TO_DATE('2020-08-18', 'YYYY-MM-DD'), TO_DATE('2022-01-19', 'YYYY-MM-DD'), 'Vivo');
+INSERT INTO mascota(Documento, Tipo_Documento, id_mascota, nombre, tipo_mascota, descripcion, fechanacimiento, fecharegistro, estado)
+VALUES(44603249, 'C.E', 16, 'Daisy', 'Gato', 'Daisy es una gatita pequeña con un pelaje corto y marrón claro', TO_DATE('2019-04-21', 'YYYY-MM-DD'), TO_DATE('2021-12-05', 'YYYY-MM-DD'), 'Vivo');
+INSERT INTO mascota(Documento, Tipo_Documento, id_mascota, nombre, tipo_mascota, descripcion, fechanacimiento, fecharegistro, estado)
+VALUES(42843403, 'T.I', 17, 'Toby', 'Perro', 'Toby es un perro de pelaje negro y blanco, con orejas caídas y una mirada curiosa', TO_DATE('2019-09-14', 'YYYY-MM-DD'), TO_DATE('2021-10-20', 'YYYY-MM-DD'), 'Vivo');
+INSERT INTO mascota(Documento, Tipo_Documento, id_mascota, nombre, tipo_mascota, descripcion, fechanacimiento, fecharegistro, estado)
+VALUES(76384941, 'C.E', 18, 'Milo', 'Gato', 'Milo es un gato de raza pequeña con un pelaje negro y una cola larga', TO_DATE('2020-02-09', 'YYYY-MM-DD'), TO_DATE('2022-02-28', 'YYYY-MM-DD'), 'Vivo');
+INSERT INTO mascota(Documento, Tipo_Documento, id_mascota, nombre, tipo_mascota, descripcion, fechanacimiento, fecharegistro, estado)
+VALUES(88742976, 'C.E', 19, 'Rosie', 'Perro', 'Rosie es un perro tricolor con un pelaje suave y patas blancas', TO_DATE('2020-07-30', 'YYYY-MM-DD'), TO_DATE('2022-04-15', 'YYYY-MM-DD'), 'Vivo');
+INSERT INTO mascota(Documento, Tipo_Documento, id_mascota, nombre, tipo_mascota, descripcion, fechanacimiento, fecharegistro, estado)
+VALUES(55615731, 'Pasaporte', 20, 'Chloe', 'Gato', 'Chloe es una gata de pelaje atigrado y ojos verdes intensos', TO_DATE('2018-10-05', 'YYYY-MM-DD'), TO_DATE('2021-06-07', 'YYYY-MM-DD'), 'Vivo');
+INSERT INTO mascota(Documento, Tipo_Documento, id_mascota, nombre, tipo_mascota, descripcion, fechanacimiento, fecharegistro, estado)
+VALUES(16325303, 'C.C', 1, 'Buddy', 'Perro', 'Buddy es un perro de raza mixta con un pelaje dorado y un hocico negro', TO_DATE('2019-04-15', 'YYYY-MM-DD'), TO_DATE('2022-02-10', 'YYYY-MM-DD'), 'Vivo');
+INSERT INTO mascota(Documento, Tipo_Documento, id_mascota, nombre, tipo_mascota, descripcion, fechanacimiento, fecharegistro, estado)
+VALUES(25180049, 'T.I', 2, 'Lily', 'Gato', 'Lily es una gata de raza siamesa con un pelaje corto y elegante', TO_DATE('2018-07-20', 'YYYY-MM-DD'), TO_DATE('2021-12-22', 'YYYY-MM-DD'), 'Vivo');
+INSERT INTO mascota(Documento, Tipo_Documento, id_mascota, nombre, tipo_mascota, descripcion, fechanacimiento, fecharegistro, estado)
+VALUES(31726375, 'T.I', 3, 'Bailey', 'Perro', 'Bailey es un perro de tamaño mediano con un pelaje blanco y manchas marrones', TO_DATE('2017-05-28', 'YYYY-MM-DD'), TO_DATE('2021-03-14', 'YYYY-MM-DD'), 'Muerto');
+INSERT INTO mascota(Documento, Tipo_Documento, id_mascota, nombre, tipo_mascota, descripcion, fechanacimiento, fecharegistro, estado)
+VALUES(94134697, 'T.I', 4, 'Zoey', 'Gato', 'Zoey es una gatita de raza mixta con un pelaje negro y patas blancas', TO_DATE('2020-03-03', 'YYYY-MM-DD'), TO_DATE('2022-01-01', 'YYYY-MM-DD'), 'Vivo');
+INSERT INTO mascota(Documento, Tipo_Documento, id_mascota, nombre, tipo_mascota, descripcion, fechanacimiento, fecharegistro, estado)
+VALUES(27377571, 'C.C', 5, 'Duke', 'Perro', 'Duke es un perro grande de pelaje marrón oscuro y una mirada imponente', TO_DATE('2019-08-15', 'YYYY-MM-DD'), TO_DATE('2021-11-19', 'YYYY-MM-DD'), 'Vivo');
+INSERT INTO mascota(Documento, Tipo_Documento, id_mascota, nombre, tipo_mascota, descripcion, fechanacimiento, fecharegistro, estado)
+VALUES(44603249, 'C.E', 6, 'Ruby', 'Gato', 'Ruby es una gata de pelaje rojo intenso y ojos amarillos brillantes', TO_DATE('2018-06-21', 'YYYY-MM-DD'), TO_DATE('2021-09-05', 'YYYY-MM-DD'), 'Muerto');
+INSERT INTO mascota(Documento, Tipo_Documento, id_mascota, nombre, tipo_mascota, descripcion, fechanacimiento, fecharegistro, estado)
+VALUES(42843403, 'T.I', 7, 'Oliver', 'Perro', 'Oliver es un perro pequeño de pelaje blanco con manchas negras en las orejas', TO_DATE('2020-12-14', 'YYYY-MM-DD'), TO_DATE('2022-02-20', 'YYYY-MM-DD'), 'Vivo');
+INSERT INTO mascota(Documento, Tipo_Documento, id_mascota, nombre, tipo_mascota, descripcion, fechanacimiento, fecharegistro, estado)
+VALUES(76384941, 'C.E', 8, 'Sadie', 'Gato', 'Sadie es una gatita de raza pequeña con un pelaje gris y ojos tiernos', TO_DATE('2018-11-09', 'YYYY-MM-DD'), TO_DATE('2021-12-28', 'YYYY-MM-DD'), 'Vivo');
+INSERT INTO mascota(Documento, Tipo_Documento, id_mascota, nombre, tipo_mascota, descripcion, fechanacimiento, fecharegistro, estado)
+VALUES(88742976, 'C.E', 9, 'Leo', 'Perro', 'Leo es un perro de raza mixta con un pelaje tricolor y patas fuertes', TO_DATE('2017-07-30', 'YYYY-MM-DD'), TO_DATE('2022-04-15', 'YYYY-MM-DD'), 'Vivo');
+INSERT INTO mascota(Documento, Tipo_Documento, id_mascota, nombre, tipo_mascota, descripcion, fechanacimiento, fecharegistro, estado)
+VALUES(55615731, 'Pasaporte', 10, 'Mocha', 'Gato', 'Mocha es una gata de pelaje marrón claro con manchas más oscuras y una cola esponjosa', TO_DATE('2019-02-05', 'YYYY-MM-DD'), TO_DATE('2021-07-07', 'YYYY-MM-DD'), 'Vivo');
+
+--------------examen------------------------
+INSERT INTO examen(Documento, TipoDocumento, id_mascota, FechaExamen, hora, descripcion)
+VALUES(1023362518, 'C.C', 15, TO_DATE('2023-09-15', 'YYYY-MM-DD'), TO_TIMESTAMP('10:30:00', 'HH24:MI:SS'), 'Examen de rutina para Charlie. Se encuentra en buen estado de salud');
+INSERT INTO examen(Documento, TipoDocumento, id_mascota, FechaExamen, hora, descripcion)
+VALUES(1192817462, 'C.C', 16, TO_DATE('2023-10-15', 'YYYY-MM-DD'), TO_TIMESTAMP('11:15:00', 'HH24:MI:SS'), 'Examen de seguimiento para Daisy. Su pelaje se encuentra en excelente condición');
+INSERT INTO examen(Documento, TipoDocumento, id_mascota, FechaExamen, hora, descripcion)
+VALUES(1192817462, 'C.C', 17, TO_DATE('2023-10-14', 'YYYY-MM-DD'), TO_TIMESTAMP('14:25:00', 'HH24:MI:SS'), 'Examen de salud para Toby. Le realizamos un control de peso');
+INSERT INTO examen(Documento, TipoDocumento, id_mascota, FechaExamen, hora, descripcion)
+VALUES(76845327, 'C.C', 18, TO_DATE('2023-10-13', 'YYYY-MM-DD'), TO_TIMESTAMP('16:00:00', 'HH24:MI:SS'), 'Examen de rutina para Milo. Su energía y vitalidad son excelentes');
+INSERT INTO examen(Documento, TipoDocumento, id_mascota, FechaExamen, hora, descripcion)
+VALUES(1023362518, 'C.C', 19, TO_DATE('2023-10-12', 'YYYY-MM-DD'), TO_TIMESTAMP('9:30:00', 'HH24:MI:SS'), 'Examen de salud para Rosie. Le recomendamos una dieta balanceada');
+INSERT INTO examen(Documento, TipoDocumento, id_mascota, FechaExamen, hora, descripcion)
+VALUES(1192817462, 'C.C', 20, TO_DATE('2023-10-11', 'YYYY-MM-DD'), TO_TIMESTAMP('15:15:00', 'HH24:MI:SS'), 'Examen de seguimiento para Chloe. Muestra un comportamiento juguetón');
+INSERT INTO examen(Documento, TipoDocumento, id_mascota, FechaExamen, hora, descripcion)
+VALUES(76845327, 'C.C', 1, TO_DATE('2023-10-10', 'YYYY-MM-DD'), TO_TIMESTAMP('13:45:00', 'HH24:MI:SS'), 'Examen de salud para Buddy. Su pelaje está en óptimas condiciones');
+INSERT INTO examen(Documento, TipoDocumento, id_mascota, FechaExamen, hora, descripcion)
+VALUES(76845327, 'C.C', 2, TO_DATE('2023-10-09', 'YYYY-MM-DD'), TO_TIMESTAMP('10:00:00', 'HH24:MI:SS'), 'Examen de seguimiento para Lily. Presenta una excelente conducta');
+INSERT INTO examen(Documento, TipoDocumento, id_mascota, FechaExamen, hora, descripcion)
+VALUES(1023362518, 'C.C', 3, TO_DATE('2023-10-08', 'YYYY-MM-DD'), TO_TIMESTAMP('14:30:00', 'HH24:MI:SS'), 'Examen de salud para Bailey. Recomendamos un plan de ejercicios');
+INSERT INTO examen(Documento, TipoDocumento, id_mascota, FechaExamen, hora, descripcion)
+VALUES(1192817462, 'C.C', 4, TO_DATE('2023-10-07', 'YYYY-MM-DD'), TO_TIMESTAMP('16:45:00', 'HH24:MI:SS'), 'Examen de salud para Zoey. Está en perfecto estado de salud');
+INSERT INTO examen(Documento, TipoDocumento, id_mascota, FechaExamen, hora, descripcion)
+VALUES(76845327, 'C.C', 5, TO_DATE('2023-10-06', 'YYYY-MM-DD'), TO_TIMESTAMP('10:00:00', 'HH24:MI:SS'), 'Examen de salud para Duke. Se le recomendó un plan de alimentación específico');
+INSERT INTO examen(Documento, TipoDocumento, id_mascota, FechaExamen, hora, descripcion)
+VALUES(4039876, 'C.C', 6, TO_DATE('2023-10-05', 'YYYY-MM-DD'), TO_TIMESTAMP('11:30:00', 'HH24:MI:SS'), 'Examen de seguimiento para Ruby. Se realizó un análisis de sangre completo');
+INSERT INTO examen(Documento, TipoDocumento, id_mascota, FechaExamen, hora, descripcion)
+VALUES(4039876, 'C.C', 7, TO_DATE('2023-10-04', 'YYYY-MM-DD'), TO_TIMESTAMP('15:15:00', 'HH24:MI:SS'), 'Examen de salud para Oliver. Sus niveles de actividad son óptimos');
+INSERT INTO examen(Documento, TipoDocumento, id_mascota, FechaExamen, hora, descripcion)
+VALUES(76845327, 'C.C', 8, TO_DATE('2023-10-03', 'YYYY-MM-DD'), TO_TIMESTAMP('09:15:00', 'HH24:MI:SS'), 'Examen de rutina para Sadie. Le recomendamos una mayor ingesta de agua');
+INSERT INTO examen(Documento, TipoDocumento, id_mascota, FechaExamen, hora, descripcion)
+VALUES(1098764837, 'C.C', 9, TO_DATE('2023-10-02', 'YYYY-MM-DD'), TO_TIMESTAMP('13:45:00', 'HH24:MI:SS'), 'Examen de salud para Leo. Está en un excelente estado físico');
+INSERT INTO examen(Documento, TipoDocumento, id_mascota, FechaExamen, hora, descripcion)
+VALUES(1098764837, 'C.C', 20, TO_DATE('2023-10-01', 'YYYY-MM-DD'), TO_TIMESTAMP('14:00:00', 'HH24:MI:SS'), 'Examen de seguimiento para Chloe. Muestra un comportamiento enérgico');
+INSERT INTO examen(Documento, TipoDocumento, id_mascota, FechaExamen, hora, descripcion)
+VALUES(76845327, 'C.C', 1, TO_DATE('2023-09-30', 'YYYY-MM-DD'), TO_TIMESTAMP('16:00:00', 'HH24:MI:SS'), 'Examen de rutina para Buddy. Su pelaje está bien cuidado');
+INSERT INTO examen(Documento, TipoDocumento, id_mascota, FechaExamen, hora, descripcion)
+VALUES(1098764837, 'C.C', 2, TO_DATE('2023-09-29', 'YYYY-MM-DD'), TO_TIMESTAMP('08:45:00', 'HH24:MI:SS'), 'Examen de seguimiento para Lily. Se recomienda un programa de ejercicios');
+INSERT INTO examen(Documento, TipoDocumento, id_mascota, FechaExamen, hora, descripcion)
+VALUES(1098764837, 'C.C', 3, TO_DATE('2023-09-28', 'YYYY-MM-DD'), TO_TIMESTAMP('10:45:00', 'HH24:MI:SS'), 'Examen de salud para Bailey. Se controló su presión arterial');
+INSERT INTO examen(Documento, TipoDocumento, id_mascota, FechaExamen, hora, descripcion)
+VALUES(76845327, 'C.C', 4, TO_DATE('2023-09-27', 'YYYY-MM-DD'), TO_TIMESTAMP('15:30:00', 'HH24:MI:SS'), 'Examen de salud para Zoey. Se recomendó un suplemento vitamínico');
+
+
+--------------cita------------------------
+INSERT INTO cita(Fecha, Hora, NumClinica ,id_mascota) VALUES(TO_DATE('2019-05-15','YYYY-MM-DD'), TO_TIMESTAMP('08:00:00','HH24:MI:SS'),123,1);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2022-08-29','YYYY-MM-DD'), TO_TIMESTAMP('10:45:00','HH24:MI:SS'),456,1);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2023-01-09','YYYY-MM-DD'), TO_TIMESTAMP('14:30:00','HH24:MI:SS'),890,1);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2017-12-04','YYYY-MM-DD'), TO_TIMESTAMP('07:55:00','HH24:MI:SS'),123,2);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2020-11-15','YYYY-MM-DD'), TO_TIMESTAMP('16:15:00','HH24:MI:SS'),234,2);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2021-10-30','YYYY-MM-DD'), TO_TIMESTAMP('12:35:00','HH24:MI:SS'),345,3);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2022-01-24','YYYY-MM-DD'), TO_TIMESTAMP('09:40:00','HH24:MI:SS'),109,3);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2023-02-13','YYYY-MM-DD'), TO_TIMESTAMP('07:00:00','HH24:MI:SS'),098,3);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2015-03-19','YYYY-MM-DD'), TO_TIMESTAMP('13:20:00','HH24:MI:SS'),567,4);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2019-04-27','YYYY-MM-DD'), TO_TIMESTAMP('18:15:00','HH24:MI:SS'),678,4);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2023-06-02','YYYY-MM-DD'), TO_TIMESTAMP('08:30:00','HH24:MI:SS'),890,4);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2020-12-24','YYYY-MM-DD'), TO_TIMESTAMP('14:25:00','HH24:MI:SS'),123,5);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2016-04-29','YYYY-MM-DD'), TO_TIMESTAMP('17:00:00','HH24:MI:SS'),012,6);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2021-12-08','YYYY-MM-DD'), TO_TIMESTAMP('06:30:00','HH24:MI:SS'),210,7);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2022-11-03','YYYY-MM-DD'), TO_TIMESTAMP('12:00:00','HH24:MI:SS'),890,7);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2022-05-11','YYYY-MM-DD'), TO_TIMESTAMP('09:30:00','HH24:MI:SS'),456,7);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2022-11-01','YYYY-MM-DD'), TO_TIMESTAMP('09:45:00','HH24:MI:SS'),789,8);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2022-12-30','YYYY-MM-DD'), TO_TIMESTAMP('16:30:00','HH24:MI:SS'),123,8);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2018-05-15','YYYY-MM-DD'), TO_TIMESTAMP('14:25:00','HH24:MI:SS'),098,9);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2023-04-29','YYYY-MM-DD'), TO_TIMESTAMP('18:30:00','HH24:MI:SS'),012,9);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2022-12-17','YYYY-MM-DD'), TO_TIMESTAMP('18:30:00','HH24:MI:SS'),345,10);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2023-01-18','YYYY-MM-DD'), TO_TIMESTAMP('14:30:00','HH24:MI:SS'),234,11);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2023-04-24','YYYY-MM-DD'), TO_TIMESTAMP('07:45:00','HH24:MI:SS'),890,11);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2018-07-16','YYYY-MM-DD'), TO_TIMESTAMP('13:15:00','HH24:MI:SS'),123,12);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2019-09-19','YYYY-MM-DD'), TO_TIMESTAMP('17:00:00','HH24:MI:SS'),098,12);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2021-12-20','YYYY-MM-DD'), TO_TIMESTAMP('07:50:00','HH24:MI:SS'),345,13);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2023-10-17','YYYY-MM-DD'), TO_TIMESTAMP('09:30:00','HH24:MI:SS'),789,14);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2020-05-14','YYYY-MM-DD'), TO_TIMESTAMP('15:30:00','HH24:MI:SS'),234,15);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2021-07-19','YYYY-MM-DD'), TO_TIMESTAMP('16:50:00','HH24:MI:SS'),012,15);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2022-05-13','YYYY-MM-DD'), TO_TIMESTAMP('07:30:00','HH24:MI:SS'),210,16);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2018-09-13','YYYY-MM-DD'), TO_TIMESTAMP('09:30:00','HH24:MI:SS'),098,17);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2019-10-03','YYYY-MM-DD'), TO_TIMESTAMP('10:00:00','HH24:MI:SS'),345,17);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2020-05-15','YYYY-MM-DD'), TO_TIMESTAMP('11:00:00','HH24:MI:SS'),678,18);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2022-08-26','YYYY-MM-DD'), TO_TIMESTAMP('12:30:00','HH24:MI:SS'),789,19);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2022-09-29','YYYY-MM-DD'), TO_TIMESTAMP('13:45:00','HH24:MI:SS'),890,19);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2023-10-17','YYYY-MM-DD'), TO_TIMESTAMP('15:30:00','HH24:MI:SS'),123,19);
+INSERT INTO cita(Fecha, Hora, NumClinica, id_mascota) VALUES(TO_DATE('2019-05-15','YYYY-MM-DD'), TO_TIMESTAMP('08:00:00','HH24:MI:SS'),234,20);
+
+--------------TipoTratamiento------------------------
+INSERT INTO TipoTratamiento(CodTratamiento,Descripcion,Costo) VALUES(1,'cirugia',60000);
+INSERT INTO TipoTratamiento(CodTratamiento,Descripcion,Costo) VALUES(2,'examen',20000);
+INSERT INTO TipoTratamiento(CodTratamiento,Descripcion,Costo) VALUES(3,'control',10000);
+INSERT INTO TipoTratamiento(CodTratamiento,Descripcion,Costo) VALUES(4,'vacunacion',30000);
+INSERT INTO TipoTratamiento(CodTratamiento,Descripcion,Costo) VALUES(5,'esterilizacion',25000);
+INSERT INTO TipoTratamiento(CodTratamiento,Descripcion,Costo) VALUES(6,'fisioterapia',40000);
+
+--------------Tratamiento------------------------
+INSERT INTO tratamiento(CodTratamiento,Id_mascota,FechaExamen,Cantidad,Fecha_inicio,Fecha_finaliza,Comentarios)
+VALUES(1,15, TO_DATE('2023-09-15', 'YYYY-MM-DD'),3,TO_DATE('2023-09-19', 'YYYY-MM-DD'),TO_DATE('2023-11-12', 'YYYY-MM-DD'),'mate ese perro');
+INSERT INTO tratamiento(CodTratamiento,Id_mascota, FechaExamen, Cantidad, Fecha_inicio, Fecha_finaliza, Comentarios)
+VALUES (2,16,TO_DATE('2023-10-15', 'YYYY-MM-DD'), 4, TO_DATE('2023-10-18', 'YYYY-MM-DD'), TO_DATE('2023-11-14', 'YYYY-MM-DD'), 'matese señora');
+INSERT INTO tratamiento(CodTratamiento,Id_mascota,FechaExamen,Cantidad,Fecha_inicio,Fecha_finaliza,Comentarios)
+VALUES(3,17, TO_DATE('2023-10-14', 'YYYY-MM-DD'),6,TO_DATE('2023-10-15', 'YYYY-MM-DD'),TO_DATE('2023-12-17', 'YYYY-MM-DD'),'no le de huesos');
+INSERT INTO tratamiento(CodTratamiento,Id_mascota,FechaExamen,Cantidad,Fecha_inicio,Fecha_finaliza,Comentarios) 
+VALUES(4,18, TO_DATE('2023-10-13', 'YYYY-MM-DD'),1,TO_DATE('2023-10-14', 'YYYY-MM-DD'),TO_DATE('2023-11-11', 'YYYY-MM-DD'),'sin agua 1 semana');
+INSERT INTO tratamiento(CodTratamiento,Id_mascota,FechaExamen,Cantidad,Fecha_inicio,Fecha_finaliza,Comentarios)
+VALUES(5, 19, TO_DATE('2023-10-12', 'YYYY-MM-DD'),2,TO_DATE('2023-10-18', 'YYYY-MM-DD'),TO_DATE('2023-11-19', 'YYYY-MM-DD'),'sin comer 1 dia');
+INSERT INTO tratamiento(CodTratamiento,Id_mascota,FechaExamen,Cantidad,Fecha_inicio,Fecha_finaliza,Comentarios)
+VALUES(6,20, TO_DATE('2023-10-11', 'YYYY-MM-DD'),3,TO_DATE('2023-10-12', 'YYYY-MM-DD'),TO_DATE('2023-12-10', 'YYYY-MM-DD'),'que no se rasque');
+INSERT INTO tratamiento(CodTratamiento,Id_mascota,FechaExamen,Cantidad,Fecha_inicio,Fecha_finaliza,Comentarios) 
+VALUES(2, 4, TO_DATE('2023-10-07', 'YYYY-MM-DD'),4,TO_DATE('2023-10-15', 'YYYY-MM-DD'),TO_DATE('2024-01-7', 'YYYY-MM-DD'),'estar atento');
+INSERT INTO tratamiento(CodTratamiento,Id_mascota,FechaExamen,Cantidad,Fecha_inicio,Fecha_finaliza,Comentarios)
+VALUES(5, 2, TO_DATE('2023-10-09', 'YYYY-MM-DD'),1,TO_DATE('2023-10-11', 'YYYY-MM-DD'),TO_DATE('2023-11-9', 'YYYY-MM-DD'),'consentirlo mucho');
+INSERT INTO tratamiento(CodTratamiento,Id_mascota,FechaExamen,Cantidad,Fecha_inicio,Fecha_finaliza,Comentarios)
+VALUES(3, 3, TO_DATE('2023-10-08', 'YYYY-MM-DD'),2,TO_DATE('2023-10-09', 'YYYY-MM-DD'),TO_DATE('2023-12-30', 'YYYY-MM-DD'),'salir de viaje');
+INSERT INTO tratamiento(CodTratamiento,Id_mascota,FechaExamen,Cantidad,Fecha_inicio,Fecha_finaliza,Comentarios)
+VALUES(1,4, TO_DATE('2023-10-07', 'YYYY-MM-DD'),1,TO_DATE('2023-10-12', 'YYYY-MM-DD'),TO_DATE('2023-11-26', 'YYYY-MM-DD'),'molestese');
+INSERT INTO tratamiento(CodTratamiento,Id_mascota,FechaExamen,Cantidad,Fecha_inicio,Fecha_finaliza,Comentarios)
+VALUES(2,5, TO_DATE('2023-10-06', 'YYYY-MM-DD'),3,TO_DATE('2023-10-08', 'YYYY-MM-DD'),TO_DATE('2023-11-25', 'YYYY-MM-DD'),'no joda');
+INSERT INTO tratamiento(CodTratamiento,Id_mascota,FechaExamen,Cantidad,Fecha_inicio,Fecha_finaliza,Comentarios) 
+VALUES(5, 6, TO_DATE('2023-10-05', 'YYYY-MM-DD'),4,TO_DATE('2023-10-07', 'YYYY-MM-DD'),TO_DATE('2024-01-29', 'YYYY-MM-DD'),'no lo traiga mas');
+INSERT INTO tratamiento(CodTratamiento,Id_mascota,FechaExamen,Cantidad,Fecha_inicio,Fecha_finaliza,Comentarios) 
+VALUES(3, 7, TO_DATE('2023-10-04', 'YYYY-MM-DD'),5,TO_DATE('2023-10-06', 'YYYY-MM-DD'),TO_DATE('2023-12-21', 'YYYY-MM-DD'),'esta muy bien');
+INSERT INTO tratamiento(CodTratamiento,Id_mascota,FechaExamen,Cantidad,Fecha_inicio,Fecha_finaliza,Comentarios) 
+VALUES(4, 8, TO_DATE('2023-10-03', 'YYYY-MM-DD'),2,TO_DATE('2023-10-09', 'YYYY-MM-DD'),TO_DATE('2023-11-23', 'YYYY-MM-DD'),'bajo el sol');
+INSERT INTO tratamiento(CodTratamiento,Id_mascota,FechaExamen,Cantidad,Fecha_inicio,Fecha_finaliza,Comentarios) 
+VALUES(4, 9, TO_DATE('2023-10-02', 'YYYY-MM-DD'),1,TO_DATE('2023-10-03', 'YYYY-MM-DD'),TO_DATE('2023-01-17', 'YYYY-MM-DD'),'meterlo en la nevera por 3 dias');
+INSERT INTO tratamiento(CodTratamiento,Id_mascota,FechaExamen,Cantidad,Fecha_inicio,Fecha_finaliza,Comentarios) 
+VALUES(4, 20, TO_DATE('2023-10-01', 'YYYY-MM-DD'),4,TO_DATE('2023-10-01', 'YYYY-MM-DD'),TO_DATE('2023-11-30', 'YYYY-MM-DD'),'cepillar dientes');
+
+--------------corral------------------------
+INSERT INTO corral(Id_corral,Id_mascota,FechaExamen,Estado,Fecha_ingreso,Fecha_salida,Comentarios,CodTratamiento)
+VALUES(1, 15, TO_DATE('2023-09-15', 'YYYY-MM-DD'),'pendiente',TO_DATE('2023-09-19', 'YYYY-MM-DD'),TO_DATE('2023-09-27', 'YYYY-MM-DD'),'se cago',1);  
+INSERT INTO corral(Id_corral,Id_mascota,FechaExamen,Estado,Fecha_ingreso,Fecha_salida,Comentarios,CodTratamiento)
+VALUES(15,16, TO_DATE('2023-10-15', 'YYYY-MM-DD'),'recogiendo',TO_DATE('2023-10-19', 'YYYY-MM-DD'),TO_DATE('2023-10-29', 'YYYY-MM-DD'),'asusto a  los compañeros',2); 
+INSERT INTO corral(Id_corral,Id_mascota,FechaExamen,Estado,Fecha_ingreso,Fecha_salida,Comentarios,CodTratamiento)
+VALUES(200, 17, TO_DATE('2023-10-14', 'YYYY-MM-DD'),'recogiendo',TO_DATE('2023-10-15', 'YYYY-MM-DD'),TO_DATE('2023-10-16', 'YYYY-MM-DD'),'ronca mucho',3); 
+INSERT INTO corral(Id_corral,Id_mascota,FechaExamen,Estado,Fecha_ingreso,Fecha_salida,Comentarios,CodTratamiento)
+VALUES(87,18, TO_DATE('2023-10-13', 'YYYY-MM-DD'),'pendiente',TO_DATE('2023-10-14', 'YYYY-MM-DD'),TO_DATE('2023-10-16', 'YYYY-MM-DD'),'no se queda dormido',4); 
+INSERT INTO corral(Id_corral,Id_mascota,FechaExamen,Estado,Fecha_ingreso,Fecha_salida,Comentarios,CodTratamiento)
+VALUES(10, 19, TO_DATE('2023-10-12', 'YYYY-MM-DD'),'recogiendo',TO_DATE('2023-10-15', 'YYYY-MM-DD'),TO_DATE('2023-10-19', 'YYYY-MM-DD'),'si jode mano',5); 
+INSERT INTO corral(Id_corral,Id_mascota,FechaExamen,Estado,Fecha_ingreso,Fecha_salida,Comentarios,CodTratamiento)
+VALUES(47, 20, TO_DATE('2023-10-11', 'YYYY-MM-DD'),'pendiente',TO_DATE('2023-10-11', 'YYYY-MM-DD'),TO_DATE('2023-11-11', 'YYYY-MM-DD'),'traigalo otra vez gratis',6); 
+INSERT INTO corral(Id_corral,Id_mascota,FechaExamen,Estado,Fecha_ingreso,Fecha_salida,Comentarios,CodTratamiento)
+VALUES(80, 2, TO_DATE('2023-10-09', 'YYYY-MM-DD'),'pendiente',TO_DATE('2023-10-10', 'YYYY-MM-DD'),TO_DATE('2023-10-15', 'YYYY-MM-DD'),'la buena',5); 
+INSERT INTO corral(Id_corral,Id_mascota,FechaExamen,Estado,Fecha_ingreso,Fecha_salida,Comentarios,CodTratamiento)
+VALUES(280, 3, TO_DATE('2023-10-08', 'YYYY-MM-DD'),'recogiendo',TO_DATE('2023-10-09', 'YYYY-MM-DD'),TO_DATE('2023-10-30', 'YYYY-MM-DD'),'lindo color',3); 
+INSERT INTO corral(Id_corral,Id_mascota,FechaExamen,Estado,Fecha_ingreso,Fecha_salida,Comentarios,CodTratamiento)
+VALUES(300, 4, TO_DATE('2023-10-07', 'YYYY-MM-DD'),'pendiente',TO_DATE('2023-10-09', 'YYYY-MM-DD'),TO_DATE('2023-10-19', 'YYYY-MM-DD'),'es de ambiente',1); 
+INSERT INTO corral(Id_corral,Id_mascota,FechaExamen,Estado,Fecha_ingreso,Fecha_salida,Comentarios,CodTratamiento)
+VALUES(90, 5, TO_DATE('2023-10-06', 'YYYY-MM-DD'),'recogiendo',TO_DATE('2023-10-07', 'YYYY-MM-DD'),TO_DATE('2023-10-09', 'YYYY-MM-DD'),'su dueño me gusta',2); 
+INSERT INTO corral(Id_corral,Id_mascota,FechaExamen,Estado,Fecha_ingreso,Fecha_salida,Comentarios,CodTratamiento)
+VALUES(329, 6, TO_DATE('2023-10-05', 'YYYY-MM-DD'),'pendiente',TO_DATE('2023-10-06', 'YYYY-MM-DD'),TO_DATE('2023-10-30', 'YYYY-MM-DD'),'lambon',5); 
+INSERT INTO corral(Id_corral,Id_mascota,FechaExamen,Estado,Fecha_ingreso,Fecha_salida,Comentarios,CodTratamiento)
+VALUES(19, 7, TO_DATE('2023-10-04', 'YYYY-MM-DD'),'recogiendo',TO_DATE('2023-10-05', 'YYYY-MM-DD'),TO_DATE('2023-10-19', 'YYYY-MM-DD'),'bai',3);
+INSERT INTO corral(Id_corral,Id_mascota,FechaExamen,Estado,Fecha_ingreso,Fecha_salida,Comentarios,CodTratamiento)
+VALUES(270, 8, TO_DATE('2023-10-03', 'YYYY-MM-DD'),'pendiente',TO_DATE('2023-10-04', 'YYYY-MM-DD'),TO_DATE('2023-10-05', 'YYYY-MM-DD'),'gordo',4);
+INSERT INTO corral(Id_corral,Id_mascota,FechaExamen,Estado,Fecha_ingreso,Fecha_salida,Comentarios,CodTratamiento)
+VALUES(157,  9, TO_DATE('2023-10-02', 'YYYY-MM-DD'),'recogiendo',TO_DATE('2023-10-10', 'YYYY-MM-DD'),TO_DATE('2023-10-20', 'YYYY-MM-DD'),'feo',4);
+
+--------------metodo_pago------------------------
+INSERT INTO metodo_pago(Cod_metodo,metodo) VALUES(1,'efectivo');
+INSERT INTO metodo_pago(Cod_metodo,metodo) VALUES(2,'tarjeta debito');
+INSERT INTO metodo_pago(Cod_metodo,metodo) VALUES(3,'tarjeta credito');
+INSERT INTO metodo_pago(Cod_metodo,metodo) VALUES(4,'nequi');
+INSERT INTO metodo_pago(Cod_metodo,metodo) VALUES(5,'daviplata');
+INSERT INTO metodo_pago(Cod_metodo,metodo) VALUES(6,'coinc');
+
+--------------factura------------------------
+INSERT INTO factura(Num_factura,Fecha,CodTratamiento,Id_mascota,FechaExamen,FechaPago,Cod_metodo)
+VALUES(1,TO_DATE('2023-09-16', 'YYYY-MM-DD'),1,15, TO_DATE('2023-09-15', 'YYYY-MM-DD'),TO_DATE('2023-11-13', 'YYYY-MM-DD'),1);
+INSERT INTO factura(Num_factura,Fecha,CodTratamiento,Id_mascota,FechaExamen,FechaPago,Cod_metodo)
+VALUES(2,TO_DATE('2023-10-16', 'YYYY-MM-DD'),2, 16, TO_DATE('2023-10-15', 'YYYY-MM-DD'),TO_DATE('2023-11-15', 'YYYY-MM-DD'),2);
+INSERT INTO factura(Num_factura,Fecha,CodTratamiento,Id_mascota,FechaExamen,FechaPago,Cod_metodo)
+VALUES(3,TO_DATE('2023-10-15', 'YYYY-MM-DD'),3,17, TO_DATE('2023-10-14', 'YYYY-MM-DD'),TO_DATE('2023-12-18', 'YYYY-MM-DD'),3);
+INSERT INTO factura(Num_factura,Fecha,CodTratamiento,Id_mascota,FechaExamen,FechaPago,Cod_metodo)
+VALUES(4,TO_DATE('2023-10-14', 'YYYY-MM-DD'),4,18, TO_DATE('2023-10-13', 'YYYY-MM-DD'),TO_DATE('2023-11-12', 'YYYY-MM-DD'),4);
+INSERT INTO factura(Num_factura,Fecha,CodTratamiento,Id_mascota,FechaExamen,FechaPago,Cod_metodo)
+VALUES(5,TO_DATE('2023-10-13', 'YYYY-MM-DD'),5, 19, TO_DATE('2023-10-12', 'YYYY-MM-DD'),TO_DATE('2023-11-20', 'YYYY-MM-DD'),5);
+INSERT INTO factura(Num_factura,Fecha,CodTratamiento,Id_mascota,FechaExamen,FechaPago,Cod_metodo)
+VALUES(6,TO_DATE('2023-10-12', 'YYYY-MM-DD'),6,20, TO_DATE('2023-10-11', 'YYYY-MM-DD'),TO_DATE('2023-12-11', 'YYYY-MM-DD'),6);
+INSERT INTO factura(Num_factura,Fecha,CodTratamiento,Id_mascota,FechaExamen,FechaPago,Cod_metodo)
+VALUES(7,TO_DATE('2023-10-08', 'YYYY-MM-DD'),2, 4, TO_DATE('2023-10-07', 'YYYY-MM-DD'),TO_DATE('2024-01-08', 'YYYY-MM-DD'),4);
+INSERT INTO factura(Num_factura,Fecha,CodTratamiento,Id_mascota,FechaExamen,FechaPago,Cod_metodo)
+VALUES(8,TO_DATE('2023-10-10', 'YYYY-MM-DD'),5, 2, TO_DATE('2023-10-09', 'YYYY-MM-DD'),TO_DATE('2023-11-10', 'YYYY-MM-DD'),3);
+INSERT INTO factura(Num_factura,Fecha,CodTratamiento,Id_mascota,FechaExamen,FechaPago,Cod_metodo)
+VALUES(9,TO_DATE('2023-10-09', 'YYYY-MM-DD'),3, 3, TO_DATE('2023-10-08', 'YYYY-MM-DD'),TO_DATE('2023-12-31', 'YYYY-MM-DD'),2);
+INSERT INTO factura(Num_factura,Fecha,CodTratamiento,Id_mascota,FechaExamen,FechaPago,Cod_metodo)
+VALUES(10,TO_DATE('2023-10-08', 'YYYY-MM-DD'),1,4, TO_DATE('2023-10-07', 'YYYY-MM-DD'),TO_DATE('2023-11-27', 'YYYY-MM-DD'),5);
+INSERT INTO factura(Num_factura,Fecha,CodTratamiento,Id_mascota,FechaExamen,FechaPago,Cod_metodo)
+VALUES(11,TO_DATE('2023-10-07', 'YYYY-MM-DD'),2,5, TO_DATE('2023-10-06', 'YYYY-MM-DD'),TO_DATE('2023-11-26', 'YYYY-MM-DD'),1);
+INSERT INTO factura(Num_factura,Fecha,CodTratamiento,Id_mascota,FechaExamen,FechaPago,Cod_metodo)
+VALUES(12,TO_DATE('2023-10-06', 'YYYY-MM-DD'),5, 6, TO_DATE('2023-10-05', 'YYYY-MM-DD'),TO_DATE('2024-01-30', 'YYYY-MM-DD'),3);
+INSERT INTO factura(Num_factura,Fecha,CodTratamiento,Id_mascota,FechaExamen,FechaPago,Cod_metodo)
+VALUES(13,TO_DATE('2023-10-05', 'YYYY-MM-DD'),3, 7, TO_DATE('2023-10-04', 'YYYY-MM-DD'),TO_DATE('2023-12-22', 'YYYY-MM-DD'),5);
+INSERT INTO factura(Num_factura,Fecha,CodTratamiento,Id_mascota,FechaExamen,Cod_metodo)
+VALUES(14,TO_DATE('2023-10-04', 'YYYY-MM-DD'),4, 8, TO_DATE('2023-10-03', 'YYYY-MM-DD'),2);
+INSERT INTO factura(Num_factura,Fecha,CodTratamiento,Id_mascota,FechaExamen,FechaPago,Cod_metodo)
+VALUES(15,TO_DATE('2023-10-03', 'YYYY-MM-DD'),4, 9, TO_DATE('2023-10-02', 'YYYY-MM-DD'),TO_DATE('2023-01-18', 'YYYY-MM-DD'),3);
+INSERT INTO factura(Num_factura,Fecha,CodTratamiento,Id_mascota,FechaExamen,FechaPago,Cod_metodo)
+VALUES(16,TO_DATE('2023-10-02', 'YYYY-MM-DD'),4, 20, TO_DATE('2023-10-01', 'YYYY-MM-DD'),TO_DATE('2023-12-01', 'YYYY-MM-DD'),6);
